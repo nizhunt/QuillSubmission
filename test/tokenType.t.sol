@@ -3,6 +3,7 @@ pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
 import "../src/QuillTask.sol";
+
 import "../src/POC/tokenType.sol";
 
 /* Note: 
@@ -51,8 +52,8 @@ contract TokenType is Test {
         quillTest.stake(1000, cheapToken);
         quillTest.withdraw(expensiveToken, 1000);
 
-        // The claimer gets way more reward than they should
-        assertGt(expensiveToken.balanceOf(Hacker), 1000);
+        // Hacker staked cheapToken and withdrew expensive Token
+        assertEq(expensiveToken.balanceOf(Hacker), 1000);
 
         vm.stopPrank();
     }

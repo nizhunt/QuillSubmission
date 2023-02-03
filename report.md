@@ -2,20 +2,19 @@
 
 > Content
 
-- [High Severity Findings](this)
+- [High Severity Findings](#high-severity-findings)
 
-  - [Access-Control Bug](this)
-  - [Wrong Reset](this)
-  - [No Check For Token Type](this)
-  - [Staking rewrites previous stakes](this)
-  - [Use of wrong variable](this)
+  - [Access-Control Bug](#access-control-bug)
+  - [Wrong Reset](#wrong-reset)
+  - [No Check For Token Type](#no-check-for-token-type)
+  - [Staking rewrites previous stakes](#staking-rewrites-previous-stakes)
+  - [Use of wrong variable](#use-of-wrong-variable)
 
-- [Mid Severity Findings](this)
+- [Mid Severity Findings](#mid-severity-findings)
 
-  - [Unsafe ERC20 Transfer](this)
-  - [Unsafe ERC20 Transfer](this)
+  - [Unsafe ERC20 Transfer](#unsafe-erc20-transfer)
 
-- [Gas Optimizations Suggestions](this)
+- [Gas Optimizations Suggestions](#gas-optimizations-suggestions)
 
 ## [Source Contract](https://github.com/Quillhash/Audit_mocks/blob/main/QuillTest.sol)
 
