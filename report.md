@@ -16,7 +16,7 @@
 
 - [Gas Optimizations Suggestions](#gas-optimizations-suggestions)
 
-## [Source Contract](https://github.com/Quillhash/Audit_mocks/blob/main/QuillTest.sol)
+## [Source Contract](https://github.com/nizhunt/QuillSubmission/blob/master/src/QuillTask.sol)
 
 ---
 
@@ -43,7 +43,7 @@ If blacklist is enabled, the function always returns true, no matter the provide
 
 This will halt the \_transfer() function, resulting into a denial of service situation.
 
-POC of this attack can be found here.
+POC of this attack can be found [here](https://github.com/nizhunt/QuillSubmission/blob/master/test/accessControl.t.sol).
 
 > Mitigation: Put 'isBlackListed[_account] == true' under an if statement to return true as shown below
 
@@ -82,7 +82,7 @@ In the above function, after the withdrawal, 'stakedAt' is set to 0.
 This may result in a loophole to draw infinite StakingReward using the following rinse repeat cycle:
 Withdraw small amount(set stakedAt=0) -> claimReward(calculate reward using block.number-stakedAt)
 
-POC for this attack can be found here:
+POC for this attack can be found [here](https://github.com/nizhunt/QuillSubmission/blob/master/test/wrongReset.t.sol).
 
 > Mitigation: Do not alter "user.stakedAt" in withdraw function
 
@@ -110,7 +110,7 @@ POC for this attack can be found here:
 
 This function does not check if the address of the token to be withdrawn is same that which was deposited. Can lead to depositing shit-coins, and withdrawing valuable tokens.
 
-POC for this attack can be found here
+POC for this attack can be found [here](https://github.com/nizhunt/QuillSubmission/blob/master/test/tokenType.t.sol)
 
 > Mitigation: Save the token address at the time of staking and use the saved address at withdrawal.
 
